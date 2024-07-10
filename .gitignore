@@ -9,3 +9,7 @@ assets/
 
 # Screenshots folder
 screenshots/
+
+.gitattributes
+
+.venv/
