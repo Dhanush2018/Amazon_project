@@ -1,0 +1,18 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+.idea/
+
+# Static folders
+assets/
+
+# Report
+report.html
+
+# Screenshots folder
+screenshots/
+
+.gitattributes
+
+.venv/
