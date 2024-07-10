@@ -1,6 +1,6 @@
 URL = "https://www.amazon.in/"
-USER_EMAIL = "dhanushvk2000@gmail.com"
-USER_PASSWORD = "Dhanush@18"
+USER_EMAIL = "your email ID"
+USER_PASSWORD = "your password"
 
 INVALID_PASSWORD = "1234ABCD"
 
