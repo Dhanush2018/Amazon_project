@@ -1,0 +1,12 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+.idea/
+
+
+# Static folders
+assets/
+
+# Screenshots folder
+screenshots/
