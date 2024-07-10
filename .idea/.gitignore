@@ -1,3 +1,15 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+
+*.pyc
+__pycache__/
+
+.idea/
+
+
+# Static folders
+assets/
+
+# Screenshots folder
+screenshots/
