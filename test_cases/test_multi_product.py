@@ -3,7 +3,6 @@ import pytest
 from test_cases.config import URL, PRODUCTS, USER_EMAIL, USER_PASSWORD
 from pages.base import BaseClass
 from pages.amazon_page import AmazonPage
-from test_cases.conftest import _capture_screenshot
 
 @pytest.mark.usefixtures("driver")
 def test_multi_products(driver):

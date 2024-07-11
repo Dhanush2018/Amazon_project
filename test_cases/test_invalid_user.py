@@ -11,9 +11,12 @@ def test_invalid_user(driver):
     # Navigate to the Amazon login page
     driver.get(URL)
 
+    log = BaseClass.getLogger()
+
     # Create an instance of AmazonLoginPage
     amazon_page = AmazonPage(driver)
 
+    log.info("Invalid Login Page Script started...")
     amazon_page.click_login_button_on_header()
 
     # Call the do_login function on the instance
