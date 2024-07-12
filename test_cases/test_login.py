@@ -1,4 +1,3 @@
-
 import pytest
 from test_cases.config import URL, USER_EMAIL, USER_PASSWORD
 from pages.base import BaseClass

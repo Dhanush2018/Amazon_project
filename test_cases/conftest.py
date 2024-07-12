@@ -7,9 +7,9 @@ def driver(request):
     if request.param == "chrome":
         driver = webdriver.Chrome()
     elif request.param == "firefox":
-        driver = webdriver.Firefox
+        driver = webdriver.Firefox()
     elif request.param == "Edge":
-        driver = webdriver.Edge
+        driver = webdriver.Edge()
         driver.get(config.URL)
         driver.maximize_window()
     else:

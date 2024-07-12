@@ -6,7 +6,7 @@ from pages.amazon_page import AmazonPage
 
 @pytest.mark.usefixtures("driver")
 def test_multi_products(driver):
-    base = BaseClass(driver)
+    BaseClass(driver)
 
     # Navigate to the Amazon login page
     driver.get(URL)

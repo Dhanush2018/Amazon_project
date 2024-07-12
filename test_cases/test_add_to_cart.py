@@ -6,7 +6,7 @@ from test_cases.conftest import _capture_screenshot
 
 @pytest.mark.usefixtures("driver")
 def test_add_to_cart(driver):
-    base = BaseClass(driver)
+    BaseClass(driver)
 
     # Navigate to the Amazon login page
     driver.get(URL)
@@ -22,7 +22,7 @@ def test_add_to_cart(driver):
     amazon_page.enter_product_on_search_field(PRODUCT)
     amazon_page.click_on_search_button()
 
-    # Add product to cartll
+    # Add product to cart
     amazon_page.click_product_add_to_cart()
 
     # Click on cart icon
