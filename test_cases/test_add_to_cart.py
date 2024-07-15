@@ -1,5 +1,5 @@
 import pytest
-from test_cases.config import URL, PRODUCT, USER_EMAIL, USER_PASSWORD
+from test_cases.config import URL, PRODUCT, user_email, user_password
 from pages.base import BaseClass
 from pages.amazon_page import AmazonPage
 from test_cases.conftest import _capture_screenshot
@@ -16,7 +16,7 @@ def test_add_to_cart(driver):
 
     # Perform login
     amazon_page.click_login_button_on_header()
-    amazon_page.do_login(USER_EMAIL, USER_PASSWORD)
+    amazon_page.do_login(user_email, user_password)
 
     # Search for the product
     amazon_page.enter_product_on_search_field(PRODUCT)

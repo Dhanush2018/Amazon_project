@@ -1,5 +1,5 @@
 import pytest
-from test_cases.config import URL, USER_EMAIL, USER_PASSWORD
+from test_cases.config import URL, user_email, user_password
 from pages.base import BaseClass
 from pages.amazon_page import AmazonPage
 from test_cases.conftest import _capture_screenshot
@@ -18,7 +18,7 @@ def test_login(driver):
     amazon_page.click_login_button_on_header()
 
     # Call the do_login function on the instance
-    amazon_page.do_login(USER_EMAIL, USER_PASSWORD)
+    amazon_page.do_login(user_email, user_password)
 
     try:
         # Assertion

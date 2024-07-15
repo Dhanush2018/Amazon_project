@@ -1,6 +1,6 @@
 import time
 import pytest
-from test_cases.config import URL, PRODUCTS, USER_EMAIL, USER_PASSWORD
+from test_cases.config import URL, PRODUCTS, user_email, user_password
 from pages.base import BaseClass
 from pages.amazon_page import AmazonPage
 
@@ -16,7 +16,7 @@ def test_multi_products(driver):
 
     # Perform login
     amazon_page.click_login_button_on_header()
-    amazon_page.do_login(USER_EMAIL, USER_PASSWORD)
+    amazon_page.do_login(user_email, user_password)
 
     # Loop through each product
     for product in PRODUCTS:
