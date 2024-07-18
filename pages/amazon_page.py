@@ -55,6 +55,16 @@ class AmazonPage(BaseClass):
     # CartPage Locators
     product_locator = (By.XPATH, "(//button[text() = 'Add to cart'])[1]")
     delete_product_from_cart_locator = (By.XPATH, "//input[@class = 'a-color-link'][1]")
+    iPhone_locator=(By.XPATH, "(//span[text()='Apple iPhone 15 Pro Max (256 GB) - Black Titanium'])[1]")
+    cost_locator=(By.XPATH, "(//span[@class='a-price-whole'])[5]")
+    customer_ratings=(By.XPATH, "//span[text()='4.4 out of 5']")
+
+    def click_on_product(self):
+        self.do_click(self.iPhone_locator)
+
+    def get_customer_ratings_element(self):
+        element = self.driver.find_element(By.XPATH, "//span[text()='4.4 out of 5']")
+        return element.text
 
     # Fuction to click on the product (add to cart button)
     def click_product_add_to_cart(self):

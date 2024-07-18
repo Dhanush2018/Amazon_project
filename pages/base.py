@@ -1,3 +1,5 @@
+import inspect
+import logging
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -24,7 +26,7 @@ class BaseClass:
         WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(by_locator)).clear()
 
     def scroll_to_element(self, by_locator):
-        element = WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(by_locator))
+        element = WebDriverWait(self.driver, 40).until(EC.visibility_of_element_located(by_locator))
         self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
         return element
 
@@ -43,3 +45,15 @@ class BaseClass:
             return True
         except:
             return False
+
+    @staticmethod
+    def getLogger():
+        loggerName = inspect.stack()[1][3]
+        logger = logging.getLogger(loggerName)
+        fileHandler = logging.FileHandler('logfile.log')
+        formatter = logging.Formatter("%(asctime)s :%(levelname)s : %(name)s :%(message)s")
+        fileHandler.setFormatter(formatter)
+
+        logger.addHandler(fileHandler)
+        logger.setLevel(logging.DEBUG)
+        return logger
